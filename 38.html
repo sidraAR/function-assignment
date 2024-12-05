@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .btn{
+    padding: 10px;
+    background-color: bisque;
+    border-radius:10px ;
+    font-weight: bolder;
+    }
+    h1{
+        margin-left: 50px;
+        color: brown;
+    
+    }
+</style>
+<body>
+    <script>
+        // _____________________________ chapter 38-42 _________________________
+        // Q#!
+//         function power(a,b) {
+//     return a ** b;
+// }
+// console.log(power(5, 3));
+// Q#2
+// function LeapYear(year) {
+//     switch (true) {
+//          case (year % 4 === 0):
+//              return `${year} is a leap year.`;
+//          default:
+//         return `${year} is not a leap year.`; ;
+//     }
+// }
+
+// var year = prompt("Enter a year:")
+//     console.log( LeapYear(year));
+// Q#3
+
+// function calculateTriangleArea(a, b, c) {
+
+//     var s = (a + b + c) / 2;
+    
+    
+//     var area =Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    
+//     return `The area of the triangle is ${area}`;
+// }
+
+// var a = parseFloat(prompt("Enter the length of side a:"));
+// var b = parseFloat(prompt("Enter the length of side b:"));
+// var c = parseFloat(prompt("Enter the length of side c:"));
+//  alert(calculateTriangleArea(a, b, c));
+
+// Q#4
+// calculate average
+// function calculateAverage(math, eng, urdu) {
+//     var average = (math + eng + urdu) / 3;
+//     console.log("Average: " + average);
+//     return average;
+// }
+
+// // Calculates percentage
+// function calculatePercentage(average, maxMarks) {
+//     var percentage = (average / maxMarks) * 100;
+//     console.log("Percentage: " + percentage + "%");
+// }
+// function mainFunction() {
+
+//     var math =parseInt(prompt("enter math marks"));  
+//     var eng =parseInt(prompt("enter english marks"));
+//     var urdu =parseInt(prompt("enter urdu marks"));
+//     var maxMarks = 100;
+
+//     // Call the first function to calculate the average
+//     var average = calculateAverage(math, eng, urdu);
+
+//     // Call the second function to calculate the percentage using the average
+//     calculatePercentage(average, maxMarks);
+// }
+// mainFunction();     
+// Q#5
+// function customIndexOf(str, char) {
+//     for (var i = 0; i < str.length; i++) {
+//         if (str[i] === char) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// var result = customIndexOf("hello world", "d");
+// console.log(result);
+
+// var result2 = customIndexOf("hello world", "z");
+// console.log(result2); 
+// // Q#6
+//  var sentence = "my name is sidra and i am web developer"
+// function checkVowel(sentence) {
+//    return sentence.replace(/[a,e,i,o,u]/g, '')
+    
+// }
+// var delet = checkVowel(sentence);
+// console.log(delet);
+// Q#7
+// function countDoubleVowels(text) {
+//     let count = 0;
+//     let vowels = "aeiouAEIOU";
+//     for (let i = 0; i < text.length - 1; i++) {
+    //     let currentChar = text[i];
+    //     let nextChar = text[i + 1];
+
+    //     switch (true) {
+    //         case vowels.includes(currentChar) && vowels.includes(nextChar):
+    //             count++;
+    //             break;
+    //     }
+    // }
+    // return count;
+// }
+// let sentence = "please read this application and give me graduity.";
+// let result = countDoubleVowels(sentence);
+// console.log(result); // Output: 3 (for "ee", "ee", "oo")
+// Q#8
+// convert km into meter
+// var distance = parseInt(prompt("enter the distance in km"));
+// function meter() {
+//     return distance * 1000;
+    
+// }
+// var result1 = meter();
+// console.log("distance convert in meter" + " " + result1 +"m");
+// // convert km into centemeter
+// function centemeter() {
+    // return distance * 1000 * 100;
+    
+// }
+// var result2 = centemeter();
+// console.log("distance convert in centemeter" + " " + result2 +"cm");
+// // convert km into feet
+// function feet() {
+//     return distance * 3280.84;  
+// }
+// var result3 = feet();
+// console.log("distance convert in feet" + " " + result3 +"ft");
+// // convert km into inches
+// function inche() {
+//     return distance * 39370.1;
+    
+// }
+// var result4 = inche();
+// console.log("distance convert in inche" + " " + result4 +"inche");
+// Q#9
+// function OvertimePay(hoursWorked) {
+//     var regularHours = 40;
+//     var overtimeRs = 12;
+//     let overtimeHours = 0;
+//     let overtimePay = 0;
+
+//     if (hoursWorked > regularHours) {
+//         overtimeHours = hoursWorked - regularHours;
+//         overtimePay = overtimeHours * overtimeRs;
+//     }
+
+//     return overtimePay;
+// }
+
+// var hoursWorked = 55;
+// let overtimePay = OvertimePay(hoursWorked);
+
+// console.log(`The overtime pay for ${hoursWorked} hours of work is Rs: ${overtimePay}.`);
+//  Q#10
+function currencyNotes(amount) {
+    
+    if (amount % 10 !== 0) {
+        console.log("Invalid amount. Amount should be in multiples of 10.");
+        return;
+    }
+    let hundredNotes = 0, fiftyNotes = 0, tenNotes = 0
+    hundredNotes = Math.floor(amount / 100);
+    amount = amount % 100;
+
+    fiftyNotes = Math.floor(amount / 50);
+    amount = amount % 50;
+
+    tenNotes = Math.floor(amount / 100)
+    console.log(`Number of Rs. 100 notes: ${hundredNotes}`);
+    console.log(`Number of Rs. 50 notes: ${fiftyNotes}`);
+    console.log(`Number of Rs. 10 notes: ${tenNotes}`);
+}
+
+let amountToWithdraw = 1570;
+currencyNotes(amountToWithdraw);
+// __________________chapter  # 43-48______________ 
+ 
+
+    </script>
+    <!-- Q#1 -->
+<a href="JavaScript:void(0)" onClick="alert('the user clicks the link, it goes nowhere, and instead executes a Javascript statement');">Click</a>
+<!-- Q#2 -->
+<h1 style="font-family: Arial, Helvetica, sans-serif; text-align: center;"> VIVO MOBILE PHONE </h1>
+<img src="img/download (1).jfif" alt="" width="150px" height="200px" onclick="alert('model vivo y78 price :78000pkr ')">
+<img src="img/4.jfif" alt="" width="200px" height="200px" onclick="alert('model vivo v30 price :139000pkr ')">
+<img src="img/images.jfif" alt="" width="150px" height="200px" onclick="alert('model vivo v29 price :159000pkr ')">
+<img src="img/3.jfif" alt="" width="150px" height="200px" onclick="alert('model vivo y36 price :59000pkr ')">
+<!-- Q#3 -->
+
+    <table border="1" id="studentTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>sara</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+           
+            <tr>
+                <td>3</td>
+                <td>anum</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>hajra</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>rabya</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>nimra</td>
+                <td><button class="delete-btn">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Add event listener to the table to handle delete button clicks
+        document.getElementById('studentTable').addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-btn')) {
+                var row = event.target.closest('tr'); // Find the closest row
+                row.remove(); // Remove the row
+            }
+        });
+
+
+    </script>
+    <br>
+<img src="img/images (1).jfif" alt="" onmouseover="src = 'img/images1.jfif'" onmouseout="src = 'img/images2.jfif'" width="200px" height="200opx">
+
+
+<!-- Q#5 -->
+ 
+
+     <div class="counter-container">
+         <h1>Counter</h1>
+         <button  class="btn"  onclick="increase()">increase counter</button>
+         <button  class= "btn" onclick="decrease()">decrease counter</button>
+         <div id="counter">0</div> 
+     </div>  
+     <script>
+         
+        var count = 0;
+ 
+        
+          function increase() {
+             count++; 
+             document.getElementById('counter').innerText = count;
+         }
+ 
+        
+         function decrease() {
+             count--; 
+             document.getElementById('counter').innerText = count;
+         }
+     </script>  
+ 
+ </body>
+ </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
